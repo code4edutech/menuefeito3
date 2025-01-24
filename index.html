@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Menu sofisticado com animação de slide e borda preenchida.">
+    <meta name="keywords" content="menu, animação, slide, borda preenchida, design sofisticado">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="author" content="Iago Barreto">
+    <title>Menu Elegante 3</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+        }
+
+        nav {
+            background-color: #333;
+            display: flex;
+            justify-content: center;
+            padding: 20px 0;
+            position: relative;
+        }
+        nav a {
+            text-decoration: none;
+            color: #fff;
+            font-size: 18px;
+            padding: 10px 20px;
+            margin: 0 15px;
+            position: relative;
+            overflow: hidden;
+        }
+        nav a::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 3px;
+            background-color: #f39c12;
+            transform: translateX(-100%);
+            transition: transform 0.3s ease;
+        }
+        nav a:hover::before {
+            transform: translateX(0);
+        }
+        nav a span {
+            display: inline-block;
+            position: relative;
+            transform: translateX(-100%);
+            animation: slide 0.5s forwards;
+            transition: transform 0.3s ease;
+        }
+        nav a:hover span {
+            transform: translateX(0);
+        }
+
+        @keyframes slide {
+            to {
+                transform: translateX(0);
+            }
+        }
+
+        footer {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 20px;
+            position: fixed;
+            width: 100%;
+            bottom: 0;
+        }
+    </style>
+</head>
+<body>
+    <!-- Menu -->
+    <nav>
+        <a href="#"><span>Página Inicial</span></a>
+        <a href="#"><span>Contato</span></a>
+        <a href="#"><span>Galeria</span></a>
+        <a href="#"><span>Quem Somos</span></a>
+    </nav>
+
+    <footer>
+        <p>© 2025 - Todos os direitos reservados.</p>
+    </footer>
+</body>
+</html>
